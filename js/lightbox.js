@@ -1,4 +1,4 @@
-const imagenes = document.querySelectorAll('.img-galeria')
+const imagenes = document.querySelectorAll('.imagen-galeria')
 const imagenesLight = document.querySelector('.agregar-imagen')
 const contenedorLight = document.querySelector('.imagen-light')
 const menu1 = document.querySelector('.icono-menu')
@@ -12,7 +12,6 @@ const aparecerImagen = (imagen)=>{
 
 imagenes.forEach(imagen =>{
     imagen.addEventListener('click', ()=>{
-        //alert(imagen.getAttribute('src'))
         aparecerImagen(imagen.getAttribute('src'))
     })
 })

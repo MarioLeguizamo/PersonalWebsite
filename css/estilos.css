@@ -1,36 +1,24 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {margin: 0;   padding: 0;   box-sizing: border-box;}
+:root {scroll-behavior: smooth;}
+body {font-family: 'Open Sans', Helvetica, sans-serif;}
+.contenedor{width: 100vw;   overflow: hidden;   margin: auto;}
 
-:root{
-    scroll-behavior: smooth;
-}
-
-body{
-    font-family: 'Open Sans', sans-serif;
-}
-
-.contenedor{
-    width: 90%;
-    max-width: 1200px;
-    overflow: hidden;
-    margin: auto;
-    padding: 60px 0px;
-}
-
-/*header******************************************************/
-.header{
+/*--HEADER------------------------------------------------------------------------*/
+header{
+    background-image: linear-gradient(to top, rgba(0, 197, 251, 0.2) 0%, rgba(0, 90, 234, 0.2) 100%);
     height: 100vh;
-    background-image: linear-gradient(to top, rgba(0, 197, 251, 0.3) 0%, rgba(0, 90, 234, 0.3) 100%);/*
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;*/
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 30px;
 }
 
-.video-fondo{
+.video-fondo {
     position: fixed;
     top: 0;
     left: 0;
@@ -41,7 +29,7 @@ body{
     overflow: hidden;
  }
 
- .video-fondo iframe{
+ .video-fondo iframe {
     width: 100vw;
     height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
     min-height: 100vh;
@@ -52,17 +40,53 @@ body{
     transform: translate(-50%, -50%);
  }
 
-.inicio{
+ header p{
+     max-width: 390px;
+ }
+ 
+ header img{
+     position: absolute;
+     top: 30px;
+     left: 17px;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+
+ /*--SocialMedia-------------------------------------------------------------------*/
+ .social-media{
+    position: fixed;
+    width: 70px;
+    top: 100px;
+    left: 21px;
+ }
+
+.social-media-icon{
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
     text-align: center;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    color: #000;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.social-media-icon:hover{
+    background: #000;
     color: #fff;
 }
 
+
+/*--Menu--------------------------------------------------------------------------*/
 .icono-menu{
     position: fixed;
     top: 30px;
@@ -75,7 +99,7 @@ body{
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
-.menu-navegacion{
+.menu{
     position: fixed;
     top: 0px;
     right: 0px;
@@ -89,52 +113,62 @@ body{
     transition: transform .3s ease-in-out;
     transform: translate(110%);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
-.menu-navegacion a{
+.menu a{
     color: #fff;
     text-decoration: none;
 }
 
-.desplazamiento-menu{
+.despalzamiento-menu{
     transform: translate(0);
 }
 
-.saludo{
-    font-weight: 300;
-    font-size: 25px;
+/*--MAIN--------------------------------------------------------------------------*/
+/*--Descripcion-------------------------------------------------------------------*/
+#id-descripcion{
+    background: white;
+    width: 100%;
+    padding-inline: 50px;
+    padding-block: 30px;
+    margin: auto;
 }
 
-.frase{
-    font-weight: 300;
-    font-size: 25px;
+h2{
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 30px;
 }
 
-.titulo{
-    font-size: 60px;
-}
-
-/*about*******************************************************/
-.about{
-    height: 100vh;
+.descripcion{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    background: #fff;
 }
 
-.subtitulo{
-    text-align: center;
-    font-weight: 300;
-    color: #005bea;
-    margin-bottom: 40px;
-    font-size: 40px;
+.descripcion p{
+    padding-bottom: 20px;
 }
 
-/*projects****************************************************/
-.gallery{
-    background: #f2f2f2;
+.descripcion img{
+    width: 35%;
+    border-radius: 50%;
+    padding-bottom: 30px;
+}
+
+.articulos{
+    width: 45%;
+}
+
+/*--Galeria-----------------------------------------------------------------------*/
+#id-proyectos{
+    background: white;
+    width: 100%;
+    padding-inline: 50px;
+    padding-block: 30px;
+    margin: auto;
 }
 
 .contenedor-galeria{
@@ -143,7 +177,7 @@ body{
     flex-wrap: wrap;
 }
 
-.img-galeria{
+.imagen-galeria{
     object-fit: cover;
     width: 30%;
     display: block;
@@ -166,10 +200,6 @@ body{
     transition: transform 0.2s ease-in-out;
 }
 
-.show{
-    transform: translate(0);
-}
-
 .agregar-imagen{
     object-fit: cover;
     width: 60%;
@@ -182,6 +212,10 @@ body{
     transform: scale(1);
 }
 
+.show{
+    transform: translate(0);
+}
+
 .close{
     position: absolute;
     top: 15px;
@@ -190,63 +224,28 @@ body{
     cursor: pointer;
 }
 
-/*footer******************************************************/
+/*--FOOTER------------------------------------------------------------------------*/
 footer{
     background: #00c6fb;
-    padding-bottom: 0.1px;
-}
-
-.base{
+    width: 100%;
+    padding: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-top: 60px;
-    padding-bottom: 40px;
-}
-
-.contacto{
-    width: 40%;
+    flex-direction: column;
     color: #fff;
+    font-size: 20px;
 }
 
-.marca{
-    font-weight: 500;
-    font-size: 40px;
+footer h2{
+    text-align: left;
+    padding-left: 70px;
 }
 
-.marca+p{
-    font-weight: 500;
+footer p{
+    padding-left: 70px;
+    padding-bottom: 30px;
 }
 
-.redes-sociales{
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.redes-sociales a{
-    display: inline-block;
-    margin-left: 20px;
-    width: 60px;
-    height: 60px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    text-align: center;
-    color: #fff;
-}
-
-.redes-sociales a:hover{
-    background: #fff;
-    color: #005bea;
-}
-
-.redes-sociales i{
-    font-size: 30px;
-    line-height: 60px;
-}
-
-.linea{
+.line{
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -255,98 +254,46 @@ footer{
     margin-bottom: 60px;
 }
 
-/*responsive 800**********************************************/
 @media screen and (max-width:800px) {
-    .menu-navegacion{
+    .menu{
         width: 50vw
     }
 
-    .titulo{
-        font-size: 40px;
+    .descripcion img{
+        width: 55%;
+    }
+    
+    .articulos{
+        width: 85%;
     }
 
-    .contenedor{
-        width: 80%;
-        margin-bottom: 40px;
-    }
-    /*
-    .checklist-servicio{
-        width: 80%;
-    }
-
-    .service{
-        margin-bottom: 30px;
-    }
-
-    .agregar-imagen{
-        width: 80%;
-    }
-
-    .img-galeria{
+    .imagen-galeria{
         width: 45%;
-    }
-
-    .cont-expert{
-        width: 80%;
-    }
-    */
-    .base{
-        justify-content: center;
-    }
-
-    .redes-sociales{
-        width: 80%;
-        justify-content: space-evenly;
-    }
-
-    .redes-sociales a{
-        margin-left: 0;
-    }
-
-    .redes-sociales i{
-        margin-left: 0;
-    }
-
-    .contact0{
-        text-align: center;
-        width: 80%;
-        margin-bottom: 40px;
     }
 }
 
-/*responsive 500**********************************************/
 @media screen and (max-width:500px) {
-    .icono-menu{
-        top: 20px;
-        right: 20px;
+    .menu{
+        width: 65vw
     }
 
-    .menu-navegacion{
-        width: 65vw;
+    header{
+        font-size: 20px;
     }
 
-    .titulo{
-        font-size: 30px;
+    .descripcion img{
+        width: 65%;
     }
-    /*
-    .subtitulo{
-        font-size: 30px;
-    }
-
-    .agregar-imagen{
-        width: 95%;
+    
+    .articulos{
+        width: 85%;
     }
 
-    .img-galeria{
-        width: 95%;
-    }*/
-
-    .contacto{
+    .imagen-galeria{
         width: 90%;
     }
 
-    .redes-sociales{
-        width: 100%;
+    .agregar-imagen{
+        width: 95%;
     }
 }
-
